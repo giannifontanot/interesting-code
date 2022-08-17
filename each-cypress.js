@@ -8,7 +8,7 @@ Then("I validate that the AIR chip exist on Expense Breakdown modal",() =>{
  // each function 
   
   cy.get(tag_intr).each(function (item, index, list) {
-    cy.get(item).invoke("text").then((item) => {
+    cy.get(item).invoke("text").then((item) => { 
         if (item === "true") {
           cy.get(tag_block).eq(index).children(lnk_modal).click({ force: true });
           cy.get(chp_AIR).should("be.visible");
@@ -16,3 +16,5 @@ Then("I validate that the AIR chip exist on Expense Breakdown modal",() =>{
       });
   });
 });
+
+// end of each function
